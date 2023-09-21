@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   userForm !:FormGroup;
-  constructor(private fb:FormBuilder) {
+  students:any[]=[];
+  constructor( private authService:AuthService , private fb:FormBuilder  ) {
   }
   ngOnInit(): void {
    this.creatForm();
@@ -19,6 +20,12 @@ export class RegisterComponent implements OnInit {
   email:['',[Validators.required , Validators.email]],
   password:['',[Validators.required]],
   confirmPassword:['',[Validators.required]],
+    })
+  }
+  getStudents(){
+    this.authService.getUsers().subscribe((res:any)=>{
+      this.students = res;
+      //console.log(this.students);
     })
   }
   submit(){
