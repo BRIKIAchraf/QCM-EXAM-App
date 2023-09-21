@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     RouterModule,
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot() // cette import pour le notification de la creation de user
   ],
   exports:[
     HttpClientModule,
