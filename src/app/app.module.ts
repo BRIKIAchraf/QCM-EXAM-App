@@ -9,12 +9,14 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { ExamComponent } from './student/exam/exam.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    ExamComponent
   ],
   imports: [
     BrowserModule,
