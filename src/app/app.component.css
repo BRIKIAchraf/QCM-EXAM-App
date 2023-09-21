@@ -8,14 +8,16 @@
   color: #FFF;
   direction: rtl;
   padding: 100px 20px;
+
   ul {
-      li {
-          font-size: 20px;
-          font-family: cursive;
-          display: flex;
-          img {
-              width: 10%;
-          }
+    li {
+      font-size: 20px;
+      font-family: cursive;
+      display: flex;
+
+      & img {
+        width: 10%;
       }
+    }
   }
 }
