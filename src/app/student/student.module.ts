@@ -7,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
     ExamComponent
   ],
   imports: [
-    SharedModule,
+
     CommonModule
   ]
 })

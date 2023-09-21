@@ -9,21 +9,22 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { ExamComponent } from './student/exam/exam.component';
+import { StudentModule } from './student/student.module';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     NavbarComponent,
-    ExamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
