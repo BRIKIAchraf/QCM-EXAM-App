@@ -21,5 +21,12 @@ export class RegisterComponent implements OnInit {
   confirmPassword:['',[Validators.required]],
     })
   }
+  submit(){
+    const model = { // je preparer le model qui va passer au base de donne , et qui requiper le valeur de de champ
+      username:this.userForm.value.username, // et pour recuper le value de chaque champ
+      email:this.userForm.value.email,
+      password:this.userForm.value.password,
+    }
+  }
 
 }
