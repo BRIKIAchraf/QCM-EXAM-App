@@ -11,12 +11,15 @@ import { MatInputModule } from '@angular/material/input';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { StudentModule } from './student/student.module';
 import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent,
-    NavbarComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
-
+    MatRadioModule,
+    MatFormFieldModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
